@@ -28,11 +28,8 @@ const getUser = async(username) => {
     main.innerHTML = card;
     getRepos(username)
 }
-
-
 // init call
-getUser("bhagirath-wscubetech")
-
+getUser("shyam-123pandey")
 
 const getRepos = async(username) => {
     const repos = document.querySelector("#repos")
@@ -40,7 +37,6 @@ const getRepos = async(username) => {
     const data = await response.json();
     data.forEach(
         (item) => {
-
             const elem = document.createElement("a")
             elem.classList.add("repo")
             elem.href = item.html_url
@@ -58,7 +54,6 @@ const formSubmit = () => {
     }
     return false;
 }
-
 
 searchBox.addEventListener(
         "focusout",
